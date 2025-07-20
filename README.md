@@ -13,10 +13,8 @@ This project is a lightweight Python web application built with Flask, designed 
 - [Configuration](#configuration)
 - [Dependencies](#dependencies)
 - [Deployment](#deployment)
-- [Examples](#examples)
 - [Troubleshooting](#troubleshooting)
 - [Contributors](#contributors)
-- [License](#license)
 
 ---
 
