@@ -84,14 +84,6 @@ pymongo
 Jinja2, click, certifi, idna, urllib3, six, chardet, MarkupSafe, itsdangerous, Werkzeug
 ```
 
----
-
-## 🧪 Examples
-
-If you provide input or endpoints, I can include detailed example requests/responses here. Let me know if you'd like that.
-
----
-
 ## 🛠 Troubleshooting
 
 - Ensure all dependencies are installed correctly.
