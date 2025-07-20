@@ -74,12 +74,12 @@ def index():
             commentboxes = prod_html.find_all('div', {'class': "RcXBOT"})
 
             filename = searchString + ".csv"
-            fw = open(filename, 'a', newline='')
-            headers = "Product, Customer Name, Rating, Heading, Comment \n"
-            fw_writer = csv.writer(fw)
-            fw_writer.writerow(headers)
-            fw.close()
+            headers = ["Product", "Customer Name", "Rating", "Heading", "Comment"]
             reviews = []
+            with open(filename, 'w', newline='', encoding='utf-8') as fw:
+                fw_writer = csv.writer(fw)
+                fw_writer.writerow(headers)
+
             for commentbox in commentboxes:
                 try:
                     #name.encode(encoding='utf-8')
@@ -114,10 +114,7 @@ def index():
                 mydict = {"Product": searchString, "Name": name, "Rating": rating, "CommentHead": commentHead,
                           "Comment": custComment}
                 reviews.append(mydict)
-                fw = open(filename, 'a', newline='')
-                fw_writer = csv.writer(fw)
-                fw_writer.writerow(mydict)
-                fw.close()
+                fw_writer.writerow([mydict["Product"], mydict["Name"], mydict["Rating"], mydict["CommentHead"], mydict["Comment"]])
             logging.info("log my final result {}".format(reviews))
 
             from pymongo import MongoClient
